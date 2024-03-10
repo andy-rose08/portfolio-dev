@@ -30,24 +30,26 @@ const skills = {
 ---
 
 
-<Table>
-	<thead>
-		<tr>
-			<th class="border-b-2 text-center">Category</th>
-			<th class="border-b-2 text-center">Basic</th>
-			<th class="border-b-2 text-center">Intermediate</th>
-			<th class="border-b-2 text-center">Advanced</th>
-		</tr>
-	</thead>
-	<tbody>
-		{Object.entries(skills).map(([category, levels]) => (
-			<tr>
-				<td class="border-b text-center">{category}</td>
-				<td class="border-b text-center">{levels.Basic}</td>
-				<td class="border-b text-center">{levels.Intermediate}</td>
-				<td class="border-b text-center">{levels.Advanced}</td>
-			</tr>
-		))}
-	</tbody>
-</Table>
+<div class="overflow-x-auto">
+  <Table>
+    <thead>
+      <tr>
+        <th class="border-b-2 text-center">Category</th>
+        <th class="border-b-2 text-center">Basic</th>
+        <th class="border-b-2 text-center">Intermediate</th>
+        <th class="border-b-2 text-center">Advanced</th>
+      </tr>
+    </thead>
+    <tbody>
+      {Object.entries(skills).map(([category, levels]) => (
+        <tr>
+          <td class="border-b text-center">{category}</td>
+          <td class="border-b text-center">{levels.Basic}</td>
+          <td class="border-b text-center">{levels.Intermediate}</td>
+          <td class="border-b text-center">{levels.Advanced}</td>
+        </tr>
+      ))}
+    </tbody>
+  </Table>
+</div>
 

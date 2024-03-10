@@ -1,33 +1,32 @@
-<form id="form" class="w-full max-w-lg"  method="POST">
-
+<form id="form" class="w-full max-w-lg mx-auto" method="POST">
   <input type="hidden" name="access_key" value="e147c495-eda8-4fbb-9696-0bb202010738">
 
   <div class="flex flex-wrap -mx-3 mb-6">
-    <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+    <div class="w-full px-3 mb-6 md:mb-0">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="name">
         Name
       </label>
       <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="name" name="name" type="text" placeholder="Your Name" required>
     </div>
-    <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+    <div class="w-full px-3 mb-6 md:mb-0">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
         Email
       </label>
       <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="email" name="email" type="email" placeholder="you@example.com" required>
     </div>
-    <div class="w-full md:w-full px-3">
+    <div class="w-full px-3">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="subject">
         Subject
       </label>
       <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="subject" name="subject" type="text" placeholder="Subject" required>
     </div>
-    <div class="w-full md:w-full px-3">
+    <div class="w-full px-3">
       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="message">
         Message
       </label>
       <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message" name="message" required></textarea>
     </div>
-    <div class="w-full md:w-full flex items-start md:w-full px-3">
+    <div class="w-full flex items-start md:w-full px-3">
       <div class="flex items-start w-1/2 text-gray-700 px-2 mr-auto">
         <svg fill="none" class="w-6 h-6 text-gray-600 mr-1" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
@@ -40,7 +39,6 @@
     </div>
   </div>
 </form>
-
 
 <script is:inline>
   const form = document.getElementById('form');
