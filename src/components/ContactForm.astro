@@ -1,0 +1,52 @@
+<form id="contact-form" class="w-full max-w-lg" action="/" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact">
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full md:w-full px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
+        Email
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="email" name="email" type="email" placeholder="you@example.com" required>
+    </div>
+    <div class="w-full md:w-full px-3">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="subject">
+        Subject
+      </label>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="subject" name="subject" type="text" placeholder="Subject" required>
+    </div>
+    <div class="w-full md:w-full px-3">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="message">
+        Message
+      </label>
+      <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message" name="message" required></textarea>
+    </div>
+    <div class="w-full md:w-full flex items-start md:w-full px-3">
+      <div class="flex items-start w-1/2 text-gray-700 px-2 mr-auto">
+        <svg fill="none" class="w-6 h-6 text-gray-600 mr-1" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+        <p class="text-xs md:text-sm pt-px">Some features will be added soon</p>
+      </div>
+      <div class="-mr-1">
+        <input type='submit' class="flex-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" value='Submit'>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script>
+document.querySelector('#contact-form').addEventListener('submit', (e) => {
+  let isValid = true;
+  const inputs = document.querySelectorAll('#contact-form input, #contact-form textarea');
+  inputs.forEach(input => {
+    if (!input.checkValidity()) {
+      isValid = false;
+      input.classList.add('border-red-500');
+    } else {
+      input.classList.remove('border-red-500');
+    }
+  });
+  if (!isValid) {
+    e.preventDefault();
+  }
+});
+</script>

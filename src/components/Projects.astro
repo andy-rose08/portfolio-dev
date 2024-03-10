@@ -1,0 +1,29 @@
+---
+const PROJECTS = [
+  {
+    title: 'Project 1',
+    link:"https://web-app-vue.netlify.app",
+    github:"https://github.com/andy-rose08/Vue-Projects",
+    description: 'Description 1',
+    image: '/img/profilepic.png',
+    tags:['ORACLE','PL/SQL','PostgreSQL'],
+  }
+]
+---
+
+{
+  PROJECTS.map(({image, title, description, tags })=>(
+    <article>
+        <h3>
+          {title}
+        </h3>
+        <p>{description}</p>
+        <ul>
+          {tags.map((tag) => (
+            <li>{tag}</li>
+          ))}
+        </ul>
+        <img src={image} alt={`Captura de pantalla del proyecto ${image}`}/>
+      </article>
+  ))
+}

@@ -1,0 +1,53 @@
+---
+import Table from '../components/Table.astro';
+const skills = {
+	"Programming Languages": {
+		"Basic": "",
+		"Intermediate": "C#, C/++, Java, Python, JavaScript, TypeScript, HTML, CSS, PL/SQL",
+		"Advanced": ""
+	},
+	"Libraries/Frameworks/Tools": {
+		"Basic": "Spring Boot, Hibernate, Eureka, OpenFeign, Nextjs, Flask, FastAPI, Astro",
+		"Intermediate": "React, Vue 3, Bootstrap, Tailwindcss, Angular, Nodejs, Expressjs, Nestjs, Vite, JSP, Servlets",
+		"Advanced": ""
+	},
+	"Databases": {
+		"Basic": "Firebase, Neon",
+		"Intermediate": "PostgreSQL, MongoDB, Oracle, SQL Server, MySQL",
+		"Advanced": ""
+	},
+	"Version Control": {
+		"Basic": "",
+		"Intermediate": "Git",
+		"Advanced": ""
+	},
+	"Operating Systems": {
+		"Basic": "Mac, Kali Linux",
+		"Intermediate": "Ubuntu",
+		"Advanced": "Windows"
+	}
+};
+---
+
+
+<Table>
+	<thead>
+		<tr>
+			<th class="border-b-2 text-center">Category</th>
+			<th class="border-b-2 text-center">Basic</th>
+			<th class="border-b-2 text-center">Intermediate</th>
+			<th class="border-b-2 text-center">Advanced</th>
+		</tr>
+	</thead>
+	<tbody>
+		{Object.entries(skills).map(([category, levels]) => (
+			<tr>
+				<td class="border-b text-center">{category}</td>
+				<td class="border-b text-center">{levels.Basic}</td>
+				<td class="border-b text-center">{levels.Intermediate}</td>
+				<td class="border-b text-center">{levels.Advanced}</td>
+			</tr>
+		))}
+	</tbody>
+</Table>
+

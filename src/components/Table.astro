@@ -1,0 +1,36 @@
+<table class="min-w-full divide-y divide-gray-200 mx-auto w-full md:w-1/2">
+	<slot></slot>
+</table>
+
+<style>
+	@media (max-width: 640px) {
+		table {
+			display: block;
+		}
+		table > *, table tr, table td, table th {
+			display: block;
+		}
+		table thead {
+			display: none;
+		}
+		table tbody tr {
+			height: auto;
+			padding: 0.5rem;
+			line-height: 1.375rem;
+			border-width: 0;
+		}
+		table tbody tr td {
+			border-bottom: 1px solid #dee2e6;
+			box-sizing: border-box;
+			margin-bottom: 0.625rem;
+			padding: 0 0.625rem;
+			hyphens: auto;
+			-moz-hyphens: auto;
+			-webkit-hyphens: auto;
+			word-wrap: break-word;
+		}
+		table tbody tr td:last-child {
+			border-bottom-width: 0;
+		}
+	}
+</style>
