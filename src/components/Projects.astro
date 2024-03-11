@@ -47,7 +47,7 @@ const PROJECTS = [
         </h3>
         <p class="text-lg mb-4 text-pretty">{description}</p>
         <div class="flex flex-col lg:flex-row gap-y-4 lg:gap-x-4">
-          <ul class="flex gap-x-4 flex-row">
+          <ul class="flex flex-wrap gap-x-4 flex-row">
             Technologies used: {tags.map((tag) => (
               <li>
                 <span class={`flex gap-x-2 rounded-full text-sm ${tag.class}py-1 px-2`}>
