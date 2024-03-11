@@ -1,29 +1,70 @@
 ---
+import Flask from '../components/icons/Flask.astro';
+import Tailwind from '../components/icons/Tailwind.astro';
+import OpenWeather from '../components/icons/OpenWeather.astro';
+import Python from '../components/icons/Python.astro';
+
+const TAGS = {
+  FLASK:{
+    name:'Flask',
+    class: 'bg-gray-500 text-white',
+    icon: Flask
+  },
+  PYTHON:{
+    name:'Python',
+    class: 'bg-yellow-300 text-white',
+    icon: Python
+  },
+  TAILWIND:{
+    name:'Tailwindcss',
+    class: 'bg-sky-300 text-white',
+    icon: Tailwind
+  },
+  OPENWEATHERAPI:{
+    name:'Open Weather API',
+    class: 'bg-orange-300 text-white',
+    icon: OpenWeather
+  }
+}
+
 const PROJECTS = [
   {
-    title: 'Project 1',
-    link:"https://web-app-vue.netlify.app",
-    github:"https://github.com/andy-rose08/Vue-Projects",
-    description: 'Description 1',
-    image: '/img/profilepic.png',
-    tags:['ORACLE','PL/SQL','PostgreSQL'],
+    title: 'Weather Flask App',
+    link:"https://weatherflask.onrender.com/index",
+    github:"https://github.com/andy-rose08/python_flask_weather_app",
+    description: 'A simple static page developed in python with flask and tailwindcss for styling, also it uses Open Weather API to catch the weather in any city in the world. Also provides a Forecast if the user wants it.',
+    image: '/img/weatherflask.png',
+    tags:[TAGS.FLASK,TAGS.PYTHON, TAGS.TAILWIND, TAGS.OPENWEATHERAPI],
   }
 ]
 ---
 
 {
-  PROJECTS.map(({image, title, description, tags })=>(
+  PROJECTS.map(({image, link, title, description, tags })=>(
     <article>
-        <h3>
-          {title}
+        <h3 class="text-xl font-bold mb-2 text-cyan-400">
+          <a href={link} target="_blank" rel="noopener noreferrer">{title}</a>
         </h3>
-        <p>{description}</p>
-        <ul>
-          {tags.map((tag) => (
-            <li>{tag}</li>
-          ))}
-        </ul>
-        <img src={image} alt={`Captura de pantalla del proyecto ${image}`}/>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <div class="flex flex-col lg:flex-row gap-y-4 lg:gap-x-4">
+          <ul class="flex gap-x-4 flex-row">
+            Technologies used: {tags.map((tag) => (
+              <li>
+                <span class={`flex gap-x-2 rounded-full text-sm ${tag.class}py-1 px-2`}>
+                  <tag.icon class="size-4"/> 
+                  {tag.name}
+                  </span>
+                  </li>
+                  ))}
+          </ul>
+        </div>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <img 
+            class="rounded shadow-2xl shadow-white/10 w-full h-15 object-cover"
+            src={image} alt={`Captura de pantalla del proyecto ${image}`}
+          />
+        </a>
       </article>
   ))
 }
+
