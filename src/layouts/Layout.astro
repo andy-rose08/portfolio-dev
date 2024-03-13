@@ -48,6 +48,10 @@ const { description, title } = Astro.props;
 		scroll-behavior: smooth;
 	}
 
+	.dark body{
+		@apply bg-black text-white
+	}
+
 	@media(prefers-reduce-motion:reduce){
 		html{
 			scroll-behavior: auto;
