@@ -30,6 +30,7 @@ const { description, title } = Astro.props;
 		<Header />
 		<slot />
 		<Footer/>
+		
 	</body>
 </html>
 <style is:global>
@@ -46,11 +47,9 @@ const { description, title } = Astro.props;
 		flex-direction: column;
 		min-height: 100vh;
 		scroll-behavior: smooth;
+		color: white;
 	}
 
-	.dark body{
-		@apply bg-black text-white
-	}
 
 	@media(prefers-reduce-motion:reduce){
 		html{
