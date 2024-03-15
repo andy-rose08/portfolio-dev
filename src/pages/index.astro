@@ -13,7 +13,8 @@ import Projects from '../components/Projects.astro';
 import Knowledge from '../components/icons/Knowledge.astro';
 import KnowledgeTable from '../components/KnowledgeTable.astro';
 import ContactForm from '../components/ContactForm.astro';
-import PhoneWhatsAppPill from '../components/PhoneWhatsAppPill.astro';
+import Phone from '../components/icons/Phone.astro';
+import WhatsApp from '../components/icons/WhatsApp.astro';
 ---
 
 <Layout title="Denzel's Portfolio - Systems Engineer and App Developer."
@@ -64,7 +65,14 @@ description="Always looking to surpass my limits, experiences are what make huma
 								<Mail class="size-4 md:size-6"/>
 								leznedrios1208@gmail.com
 							</SocialPill>
-							<PhoneWhatsAppPill />
+							<SocialPill href="tel:+50688130229">
+								<Phone class="size-4 md:size-6"/>
+								Call Me!
+							</SocialPill>
+							<SocialPill href="https://wa.me/50688130229">
+								<WhatsApp class="size-4 md:size-6"/>
+								WhatsApp Me!
+							</SocialPill>
 					</nav>
 		</Container>
 
