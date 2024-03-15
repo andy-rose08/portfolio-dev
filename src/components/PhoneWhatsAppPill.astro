@@ -1,6 +1,5 @@
 ---
 import Phone from '../components/icons/Phone.astro';
-import { useState } from 'react';
 ---
 
 <a class="rounded-full border border-white/10 flex justify-center items-center gap-x-2 py-1 px-2 md:py-2 md:px-4
@@ -9,7 +8,7 @@ target="_blank"
 rel="noopener noreferrer"
 @click={toggleContactOptions}>
   <Phone class="size-4 md:size-6"/>
-  <div id="contactOptions" class={contactOptions ? 'block' : 'hidden'}>
+  <div id="contactOptions" :visible={contactOptions}>
     <a href="tel:+50688130229">Call</a>
     <a href="https://api.whatsapp.com/send?phone=+50688130229">Send WhatsApp Message</a>
   </div>
@@ -24,11 +23,7 @@ rel="noopener noreferrer"
 </script>
 
 <style>
-  .hidden {
+  [visible="false"] {
     display: none;
-  }
-
-  .block {
-    display: block;
   }
 </style>
