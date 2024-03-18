@@ -18,72 +18,54 @@ import WhatsApp from '../components/icons/WhatsApp.astro';
 ---
 
 <Layout title="Denzel's Portfolio - Systems Engineer and App Developer."
-description="Always looking to surpass my limits, experiences are what make humans improve themselves and I here to be the best version of myself "
->
-	<main class="px-4">
-		<Container class="py-44 pb-20">
-			<img class="rounded-full size-16 object-cover mb-4" src="/img/profilepic.png" alt="my photo">
-			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex justify-center flex-row gap-x-4 pb-6 lb:pb-10">
-				Hi 👋, I'm Denzel! 
-				<a
-				href="https://www.linkedin.com/in/denzel-ríos-montenegro-91b3b6295"
-				target="_blank"
-				rel="noopener"
-				class="flex justify-center items-center"
-				>
-					<Badge>Always Looking for New Challenges!<br>
-						(Available for job)
-					</Badge>
-				</h1>
+description="Always looking to surpass my limits, experiences are what make humans improve themselves and I here to be the best version of myself ">
+	<main class="px-4 text-white bg-black">
+		<Container class="pt-20 pb-20 md:pt-44">
+			<img class="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 object-cover mx-auto mb-8" src="/img/profilepic.png" alt="Denzel's Photo">
+			<h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center pb-4">
+				Hi 👋, I'm Denzel!
+				<a href="https://www.linkedin.com/in/denzel-ríos-montenegro-91b3b6295" target="_blank" rel="noopener noreferrer" class="block mt-2 text-cyan-400 hover:text-cyan-300">
+					Always Looking for New Challenges! (Available for job)
 				</a>
-			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-				<span>Systems Engineer</span>. 
-				<span class ="text-blue-200/90 opacity-80">
-					Experienced Programmer in web application development, creating and supervising databases, among other features.
-					</span>
-				<span class="text-red-200/90">
-					I'm from San José, Costa Rica 🇨🇷.
-				</span>
-					<span class="opacity-85">
-							I always keep improving my skills with personal projects and also become with more efficient solutions to any problem that I can encounter during coding.
-					</span>
-					</h2>
+			</h1>
+			<p class="text-center text-xl lg:text-2xl max-w-4xl mx-auto">
+				<span>Systems Engineer</span> and <span class="text-cyan-400 ">Experienced Programmer</span><span class="text-shadow-purple"> in web application development</span>. <span class="text-purple-400">I'm from San José, Costa Rica 🇨🇷.</span>
+				<br class="hidden md:block">
+				<span><span class="text-shadow-purple">Always eager to improve my skills</span> and find efficient solutions.</span>
+			</p>
 
-
-					<nav class="flex gap-4 mt-8 flex-wrap">
-						
-							<SocialPill href="https://www.linkedin.com/in/denzel-ríos-montenegro-91b3b6295">
-								<LinkedIn class="size-4 md:size-6"/>
-								LinkedIn
-							</SocialPill>
-							<SocialPill href="https://github.com/andy-rose08">
-								<GitHub class="size-4 md:size-6"/>
-								GitHub
-							</SocialPill>
-
-							<SocialPill href="mailto:leznedrios1208@gmail.com">
-								<Mail class="size-4 md:size-6"/>
-								leznedrios1208@gmail.com
-							</SocialPill>
-							<SocialPill href="tel:+50688130229">
-								<Phone class="size-4 md:size-6"/>
-								Call Me!
-							</SocialPill>
-							<SocialPill href="https://wa.me/50688130229">
-								<WhatsApp class="size-4 md:size-6"/>
-								WhatsApp Me!
-							</SocialPill>
-					</nav>
+			<nav class="flex justify-center gap-4 mt-8 flex-wrap">
+				<!-- SocialPill components here -->
+				<SocialPill href="https://www.linkedin.com/in/denzel-ríos-montenegro-91b3b6295">
+					<LinkedIn class="size-4 md:size-6"/>
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/andy-rose08">
+					<GitHub class="size-4 md:size-6"/>
+					GitHub
+				</SocialPill>
+				<SocialPill href="mailto:leznedrios1208@gmail.com">
+					<Mail class="size-4 md:size-6"/>
+					leznedrios1208@gmail.com
+				</SocialPill>
+				<SocialPill href="tel:+50688130229">
+					<Phone class="size-4 md:size-6"/>
+					Call Me!
+				</SocialPill>
+				<SocialPill href="https://wa.me/50688130229">
+					<WhatsApp class="size-4 md:size-6"/>
+					WhatsApp Me!
+				</SocialPill>
+			</nav>
 		</Container>
 
-		<Container id="experience">
+		<Container id="experience" class="mt-12">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Briefcase class="size-7"/>
-				Work Experience
+				<span class="text-shadow-purple">Work Experience</span>
 			</h2>
 			<Experience/>
 		</Container>
-
 
 		<Container id="projects">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
@@ -92,7 +74,6 @@ description="Always looking to surpass my limits, experiences are what make huma
 			</h2>
 			<Projects/>
 		</Container>
-
 
 		<Container id="skills">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
@@ -103,11 +84,12 @@ description="Always looking to surpass my limits, experiences are what make huma
 				In this area, I'll show some of the skills that I've been acquiring during my travel through the university, it's important to know that most of the technologies in here I learned them by myself, with self-taught.
 			</h3>
 			<KnowledgeTable/>
-			<Container id="contact">
-				<h2 class="mt-6 py-5 text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-					Contact
-				</h2>
-				<ContactForm />
 		</Container>
-		</main>
+
+		<Container id="contact">
+			<h2 class="mt-6 py-5 text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<ContactForm />
+			</h2>
+		</Container>
+	</main>
 </Layout>
